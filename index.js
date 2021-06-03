@@ -116,6 +116,31 @@ function collectODD(arr) {
   return result;
 }
 var result = collectODD([2, 1, 2, 23, 4]);
+
+// palindrome
+function isPalindrome(str) {
+  if (str.length === 1) return true;
+  if (str.length === 2) return str[0] === str[1];
+  if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
+  return false;
+}
+
+// flatten([1, 2, 3, [4, 5] ]) // [1, 2, 3, 4, 5]
+// flatten([1, [2, [3, 4], [[5]]]]) // [1, 2, 3, 4, 5]
+// flatten([[1],[2],[3]]) // [1,2,3]
+// flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]) // [1,
+function flatten(oldArr) {
+  var newArr = [];
+  for (var i = 0; i < oldArr.length; i++) {
+    if (Array.isArray(oldArr[i])) {
+      newArr = newArr.concat(flatten(oldArr[i]));
+    } else {
+      newArr.push(oldArr[i]);
+    }
+  }
+  return newArr;
+}
+
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `${JSON.stringify(result)}`;
