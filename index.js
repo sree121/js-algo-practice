@@ -87,8 +87,35 @@ function findMaxSum(arr, num) {
   }
   return maxSum;
 }
+//time complexity o(n)
+// var result = findMaxSum([1, 2, 2, 5, 7, 7, 9, 9], 3);
 
-var result = findMaxSum([1, 2, 2, 5, 7, 7, 9, 9], 3);
+//recursion factorial
+
+function factorial(num) {
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+}
+// var result = factorial(11);
+
+// collectodd values
+
+function collectODD(arr) {
+  let result = [];
+
+  function helper(inp) {
+    if (inp.length == 0) {
+      return;
+    }
+    if (inp[0] % 2 != 0) {
+      result.push(inp[0]);
+    }
+    helper(inp.slice(1));
+  }
+  helper(arr);
+  return result;
+}
+var result = collectODD([2, 1, 2, 23, 4]);
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `${JSON.stringify(result)}`;
