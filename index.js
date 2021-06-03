@@ -66,8 +66,29 @@ function countUniqueValues(arr) {
   return i + 1;
 }
 
-var result = countUniqueValues([1, 2, 2, 5, 7, 7, 99]);
+// var result = countUniqueValues([1, 2, 2, 5, 7, 7, 9, 9]);
 
+// max sub array of sum substring
+// input : array , num : 3
+
+function findMaxSum(arr, num) {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) {
+    return null;
+  }
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+
+var result = findMaxSum([1, 2, 2, 5, 7, 7, 9, 9], 3);
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `${JSON.stringify(result)}`;
