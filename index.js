@@ -91,13 +91,13 @@ function findMaxSum(arr, num) {
 // var result = findMaxSum([1, 2, 2, 5, 7, 7, 9, 9], 3);
 
 //recursion factorial
-
+//////////////////////////////////////////////
 function factorial(num) {
   if (num === 1) return 1;
   return num * factorial(num - 1);
 }
 // var result = factorial(11);
-
+//////////////////////////////////////////////
 // collectodd values
 
 function collectODD(arr) {
@@ -116,7 +116,7 @@ function collectODD(arr) {
   return result;
 }
 // var result = collectODD([2, 1, 2, 23, 4]);
-
+//////////////////////////////////////////////
 // palindrome
 function isPalindrome(str) {
   if (str.length === 1) return true;
@@ -124,7 +124,7 @@ function isPalindrome(str) {
   if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
   return false;
 }
-
+//////////////////////////////////////////////
 // flatten([1, 2, 3, [4, 5] ]) // [1, 2, 3, 4, 5]
 // flatten([1, [2, [3, 4], [[5]]]]) // [1, 2, 3, 4, 5]
 // flatten([[1],[2],[3]]) // [1,2,3]
@@ -140,7 +140,7 @@ function flatten(oldArr) {
   }
   return newArr;
 }
-
+//////////////////////////////////////////////
 function findNum(str) {
   var regex = /\d+/g;
   var string = 'you can enter maximum 500 choices';
@@ -148,6 +148,7 @@ function findNum(str) {
   return matches;
 }
 
+//////////////////////////////////////////////
 var result = findNum('the secret');
 
 // Write Javascript code!
