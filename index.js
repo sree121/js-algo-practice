@@ -115,7 +115,7 @@ function collectODD(arr) {
   helper(arr);
   return result;
 }
-var result = collectODD([2, 1, 2, 23, 4]);
+// var result = collectODD([2, 1, 2, 23, 4]);
 
 // palindrome
 function isPalindrome(str) {
@@ -140,6 +140,15 @@ function flatten(oldArr) {
   }
   return newArr;
 }
+
+function findNum(str) {
+  var regex = /\d+/g;
+  var string = 'you can enter maximum 500 choices';
+  var matches = string.match(regex);
+  return matches;
+}
+
+var result = findNum('the secret');
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
