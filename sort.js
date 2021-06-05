@@ -14,7 +14,7 @@ exports.func = function() {
   // i j
   // 0 0
   // Write Javascript code!
-  var result = bubbleSort([3, 2, 4]);
+  var result = bubbleSort([3, 2, 4, 1, 11, 23]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
