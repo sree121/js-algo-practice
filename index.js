@@ -1,3 +1,5 @@
+import { func } from './sort.js';
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // given 2 array find if both array has same number with squared values and not repeated
 function same(arr1, arr2) {
@@ -154,3 +156,5 @@ var result = findNum('the secret');
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `${JSON.stringify(result)}`;
+
+func();
