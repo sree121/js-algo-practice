@@ -1,4 +1,4 @@
-exports.func2 = function() {
+exports.problems = function() {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // given 2 array find if both array has same number with squared values and not repeated
   function same(arr1, arr2) {
