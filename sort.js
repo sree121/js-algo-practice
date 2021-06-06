@@ -23,7 +23,7 @@ exports.func = function() {
           low = j;
         }
       }
-      [arr[i], arr[low]] = [arr[low], arr[i]];
+      if (i !== low) [arr[i], arr[low]] = [arr[low], arr[i]];
     }
     return arr;
   }
