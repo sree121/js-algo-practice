@@ -34,7 +34,22 @@ exports.func = function() {
   [3, 2, 4, 1, 11, 23]
    i            j 
   */
-  var result = selection([3, 2, 4, 1, 11, 23]);
+
+  //Insertion sort
+  function Insertion(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      let low = i;
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[low] > arr[j]) {
+          low = j;
+        }
+      }
+      if (i !== low) [arr[i], arr[low]] = [arr[low], arr[i]];
+    }
+    return arr;
+  }
+
+  var result = Insertion([3, 2, 4, 1, 11, 23]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
