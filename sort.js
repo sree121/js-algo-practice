@@ -1,4 +1,4 @@
-exports.func = function() {
+exports.func1 = function() {
   /// bubble sort
   function bubbleSort(arr) {
     for (let i = arr.length; i > 0; i--) {
