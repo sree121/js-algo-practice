@@ -16,13 +16,14 @@ exports.func = function() {
   // Write Javascript code!
 
   function selection(arr) {
-    let min = arr[0];
     for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < arr.length; j++) {
-        if (arr[j] > arr[j + 1]) {
-          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      let low = i;
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[low] > arr[j]) {
+          low = j;
         }
       }
+      [arr[i], arr[low]] = [arr[low], arr[i]];
     }
     return arr;
   }
