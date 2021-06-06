@@ -13,8 +13,10 @@ exports.func = function() {
   // var result = bubbleSort([3, 2, 4, 1, 11, 23]);
   // i j
   // 0 0
-  // Write Javascript code!
 
+  //selecion sort
+  // find lowest and swap with index at the end of the loop
+  // time complexity o(n^2)
   function selection(arr) {
     for (let i = 0; i < arr.length; i++) {
       let low = i;
