@@ -27,6 +27,11 @@ exports.func = function() {
     }
     return arr;
   }
+  /*
+           low
+  [3, 2, 4, 1, 11, 23]
+   i            j 
+  */
   var result = selection([3, 2, 4, 1, 11, 23]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
