@@ -53,8 +53,8 @@ exports.sort = function() {
     let i = 0,
       j = 0,
       result = [];
-
-    while (i < arr1.length || j < arr2.length) {
+    //while (i < arr1.length || j < arr2.length) creates infinite loop until one condition is satisfied
+    while (i < arr1.length && j < arr2.length) {
       if (arr2[j] > arr1[i]) {
         result.push(arr1[i]);
         i++;
