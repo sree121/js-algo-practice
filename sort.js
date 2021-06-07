@@ -50,11 +50,11 @@ exports.sort = function() {
   // }
 
   function merge(arr1, arr2) {
-    let i,
+    let i = 0,
       j = 0,
       result = [];
 
-    while (i < arr1.length && j < arr2.length) {
+    while (i < arr1.length || j < arr2.length) {
       if (arr2[j] > arr1[i]) {
         result.push(arr1[i]);
         i++;
@@ -63,18 +63,10 @@ exports.sort = function() {
         j++;
       }
     }
-    while (i < arr1.length) {
-      result.push(arr1[i]);
-      i++;
-    }
-    while (j < arr2.length) {
-      result.push(arr2[j]);
-      j++;
-    }
     return result;
   }
 
-  var result = merge([1, 2, 3], [5, 6, 7]);
+  var result = merge([1, 2, 3], [5, 6, 7, 8, 9]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
