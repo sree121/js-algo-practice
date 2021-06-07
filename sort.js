@@ -65,8 +65,15 @@ exports.sort = function() {
     }
     return result;
   }
+  function mergeSort(arr) {
+    if (arr.length <= 1) return arr;
+    let mid = Math.floor(arr.length / 2);
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    return merge(left, right);
+  }
 
-  var result = merge([1, 2, 3], [5, 6, 7, 8, 9]);
+  var result = mergeSort([1, 2, 3]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
