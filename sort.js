@@ -48,7 +48,7 @@ exports.sort = function() {
   //   }
   //   return arr;
   // }
-
+  // 10   2,3
   function merge(arr1, arr2) {
     let i = 0,
       j = 0,
@@ -68,12 +68,12 @@ exports.sort = function() {
   function mergeSort(arr) {
     if (arr.length <= 1) return arr;
     let mid = Math.floor(arr.length / 2);
-    let left = mergeSort(arr.slice(0, mid));
-    let right = mergeSort(arr.slice(mid));
+    let left = mergeSort(arr.slice(0, mid)); //[10]
+    let right = mergeSort(arr.slice(mid)); // [2,3]
     return merge(left, right);
   }
 
-  var result = mergeSort([1, 2, 3]);
+  var result = merge([10], [2, 3]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
