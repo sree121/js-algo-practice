@@ -63,6 +63,14 @@ exports.sort = function() {
         j++;
       }
     }
+    while (i < arr1.length) {
+      result.push(arr1[i]);
+      i++;
+    }
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++;
+    }
     return result;
   }
   function mergeSort(arr) {
@@ -73,7 +81,7 @@ exports.sort = function() {
     return merge(left, right);
   }
 
-  var result = merge([10], [2, 3]);
+  var result = mergeSort([10, 2, 3]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
