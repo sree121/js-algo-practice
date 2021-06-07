@@ -48,6 +48,11 @@ exports.sort = function() {
   //   }
   //   return arr;
   // }
+
+  // Merge sort - divide and merge recusrsively
+  //time complexity o(n log n)
+  // length = 8; 2*2*2
+  // length = 32; 2^5
   // 10   2,3
   function merge(arr1, arr2) {
     let i = 0,
