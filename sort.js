@@ -63,6 +63,15 @@ exports.sort = function() {
         j++;
       }
     }
+    while (i < arr1.length) {
+      result.push(arr1[i]);
+      i++;
+    }
+    while (j < arr2.length) {
+      result.push(arr2[j]);
+      j++;
+    }
+    return result;
   }
 
   var result = merge([1, 2, 3], [5, 6, 7]);
