@@ -86,7 +86,10 @@ exports.sort = function() {
     return merge(left, right);
   }
 
-  var result = mergeSort([10, 2, 3]);
+  // var result = mergeSort([10, 2, 3]);
+
+  //Quick sort
+
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
