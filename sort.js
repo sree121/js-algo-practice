@@ -1,4 +1,8 @@
 exports.sort = function() {
+  //swap function
+  function swap(arr, i, low) {
+    return ([arr[i], arr[low]] = [arr[low], arr[i]]);
+  }
   /// bubble sort
   function bubbleSort(arr) {
     for (let i = arr.length; i > 0; i--) {
@@ -90,6 +94,20 @@ exports.sort = function() {
 
   //Quick sort
 
+  //find swap index where item is greater than pivot in array should be pushed.
+  function pivot(arr, start = 0, end = arr.lenght + 1) {
+    var pivot = arr[start];
+    var swapI = start;
+
+    for (var i = start + 1; i < arr.lenght; i++) {
+      if (pivot > arr[i]) {
+        swapI++;
+        swap(arr, swapI, i);
+      }
+    }
+    return arr;
+  }
+  var result = pivot([10, 2, 3]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
