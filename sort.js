@@ -108,17 +108,18 @@ exports.sort = function() {
     }
     return swapI;
   }
-  var result = QuickSort([10, 2, 3]);
 
   function QuickSort(arr, left = 0, right = arr.length - 1) {
     if (left < right) {
       let pivotI = pivot(arr, left, right);
 
       QuickSort(arr, left, pivotI - 1);
-      QuickSort(arr, pivotI + 1, righ);
+      QuickSort(arr, pivotI + 1, right);
     }
     return arr;
   }
+  var result = QuickSort([10, 2, 3]);
+
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
