@@ -109,7 +109,8 @@ exports.sort = function() {
     return swapI;
   }
   var result = pivot([10, 2, 3]);
-  var result = pivot([10, 2, 3]);
+
+  function QuickSort() {}
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
