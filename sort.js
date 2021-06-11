@@ -1,7 +1,7 @@
 exports.sort = function() {
   //swap function
-  function swap(arr, i, low) {
-    return ([arr[i], arr[low]] = [arr[low], arr[i]]);
+  function swap(arr, idx1, idx2) {
+    return ([arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]);
   }
   /// bubble sort
   function bubbleSort(arr) {
