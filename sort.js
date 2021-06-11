@@ -96,7 +96,7 @@ exports.sort = function() {
 
   //find swap index where item is greater than pivot in array should be pushed.
   // Pivot is a position in array where all items in left side of array should be less than pivot and right side should be more than pivot
-  function pivot(arr, start = 0, end = arr.length + 1) {
+  function pivot(arr, start = 0, end = arr.length - 1) {
     let pivot = arr[start];
     let swapI = start;
 
