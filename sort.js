@@ -54,6 +54,13 @@ exports.sort = function() {
   // }
 
   // Merge sort - divide and merge recusrsively
+  //            [3,4,5,1,6,7]
+  // 	  [3,4,5] [1,6,7]
+  // 	[3,4] [5]    [1,6]  [7]
+  // [3] [4] [5]     [1] [6]  [7]
+  // [3,4] [5]       [1,6] [7]
+  //   [3,4,5] 		 [1,6,7]
+  // 		[1,3,4,5,6,7]
   //time complexity o(n log n)
   // length = 8; 2*2*2
   // length = 32; 2^5
