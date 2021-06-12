@@ -3,6 +3,8 @@ exports.sort = function() {
   function swap(arr, idx1, idx2) {
     return ([arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]);
   }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   /// bubble sort
   function bubbleSort(arr) {
     //not considering i as index -> i=arr.length
@@ -19,6 +21,8 @@ exports.sort = function() {
   // var result = bubbleSort([3, 2, 4, 1, 11, 23]);
   // i j
   // 0 0
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //selecion sort
   // find lowest and swap with index at the end of the loop
@@ -41,6 +45,8 @@ exports.sort = function() {
    i            j 
   */
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   //Insertion sort
   // function Insertion(arr) {
   //   for (let i = 0; i < arr.length; i++) {
@@ -54,6 +60,8 @@ exports.sort = function() {
   //   }
   //   return arr;
   // }
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // Merge sort - divide and merge recusrsively
   //     [3,4,5,1,6,7]
@@ -100,6 +108,8 @@ exports.sort = function() {
   }
 
   // var result = mergeSort([10, 2, 3]);
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //Quick sort
 
