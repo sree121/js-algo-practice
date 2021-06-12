@@ -54,7 +54,7 @@ exports.sort = function() {
   // }
 
   // Merge sort - divide and merge recusrsively
-  //            [3,4,5,1,6,7]
+  //     [3,4,5,1,6,7]
   // 	  [3,4,5] [1,6,7]
   // 	[3,4] [5]    [1,6]  [7]
   // [3] [4] [5]     [1] [6]  [7]
