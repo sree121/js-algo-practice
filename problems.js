@@ -150,8 +150,16 @@ exports.problems = function() {
   }
 
   //////////////////////////////////////////////
-  var result = findNum('the secret');
+  // var result = findNum('the secret');
 
+  // reverse sring and letters
+  function reverse(str) {
+    return str
+      .split('')
+      .reverse()
+      .join('');
+  }
+  var result = reverse('the secret');
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
