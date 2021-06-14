@@ -1,6 +1,6 @@
 import { sort } from './sort.js';
 import { problems } from './problems.js';
 import { functional } from './functional.js';
-functional();
+// functional();
 problems();
-sort();
+// sort();

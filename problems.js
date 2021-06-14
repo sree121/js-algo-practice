@@ -159,7 +159,21 @@ exports.problems = function() {
       .reverse()
       .join('');
   }
-  var result = reverse('the secret');
+  // var result = reverse('the secret');
+
+  function sumPair(arr, sum) {
+    const pairMap = new Map();
+    for (i = 0; i < arr.length; i++) {
+      if (pairMap.has(sum - arr[i])) {
+        return true;
+      } else {
+        pairMap.set(sum - arr[i]);
+        console.log(pairMap);
+      }
+    }
+    return true;
+  }
+  var result = sumPair([1, 2, 6], 5);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
