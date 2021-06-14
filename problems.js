@@ -161,6 +161,8 @@ exports.problems = function() {
   }
   // var result = reverse('the secret');
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   function sumPair(arr, sum) {
     let map = new Map();
     for (i = 0; i < arr.length; i++) {
