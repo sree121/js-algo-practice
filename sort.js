@@ -145,6 +145,7 @@ exports.sort = function() {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //Radix sort
+  // 7323 / 100(10^2) % 10 = remainder 3 getDigit(7323,2);
   function getDigit(num, i) {
     return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
   }
