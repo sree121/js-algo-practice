@@ -1,6 +1,8 @@
 import { sort } from './sort.js';
 import { problems } from './problems.js';
 import { functional } from './functional.js';
-// functional();
+import { LinkedList } from './DS/LinkedList';
+functional();
 problems();
-// sort();
+sort();
+LinkedList();
