@@ -4,5 +4,3 @@ export class Node {
     this.next = null;
   }
 }
-
-
