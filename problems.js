@@ -171,9 +171,9 @@ exports.problems = function() {
         console.log(pairMap);
       }
     }
-    return true;
+    return false;
   }
-  var result = sumPair([1, 2, 6], 5);
+  var result = sumPair([1, 2, 4], 5);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
