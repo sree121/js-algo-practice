@@ -162,18 +162,21 @@ exports.problems = function() {
   // var result = reverse('the secret');
 
   function sumPair(arr, sum) {
-    const pairMap = new Map();
+    let map = new Map();
     for (i = 0; i < arr.length; i++) {
-      if (pairMap.has(sum - arr[i])) {
+      // console.log(map.get(sum - arr[i]));
+      if (map.has(sum - arr[i])) {
+        // console.log(map, i);
         return true;
       } else {
-        pairMap.set(sum - arr[i]);
-        console.log(pairMap);
+        let val = arr[i];
+        map.set(val, val);
+        // console.log(map);
       }
     }
     return false;
   }
-  var result = sumPair([1, 2, 4], 5);
+  var result = sumPair([4, 2, 4], 5);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
