@@ -176,7 +176,7 @@ exports.sort = function() {
     return nums;
   }
 
-  radixSort([23, 345, 5467, 12, 2345, 9852]);
+  var result = radixSort([23, 345, 5467, 12, 2345, 9852]);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
 };
