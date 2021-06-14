@@ -166,14 +166,11 @@ exports.problems = function() {
   function sumPair(arr, sum) {
     let map = new Map();
     for (i = 0; i < arr.length; i++) {
-      // console.log(map.get(sum - arr[i]));
       if (map.has(sum - arr[i])) {
-        // console.log(map, i);
         return true;
       } else {
         let val = arr[i];
         map.set(val, val);
-        // console.log(map);
       }
     }
     return false;
