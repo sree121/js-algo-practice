@@ -176,7 +176,7 @@ exports.problems = function() {
     }
     return false;
   }
-  var result = sumPair([4, 2, 4], 5);
+  var result = sumPair([5, 2, 10], 15);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;
