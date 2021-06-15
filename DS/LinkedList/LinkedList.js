@@ -46,14 +46,16 @@ export class SinglyLinkedList {
 
   unshift(val) {
     const newNode = new Node(val);
+    let currentHead = this.head;
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
+    } else {
+      newNode.next = currentHead;
+      this.head = newNode;
     }
-    let currentHead = this.head;
 
-    newNode.next = currentHead;
-    this.head = newNode;
     this.length++;
+    return this;
   }
 }
