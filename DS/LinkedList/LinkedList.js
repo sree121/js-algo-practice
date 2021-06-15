@@ -21,7 +21,7 @@ export class SinglyLinkedList {
     if (!this.head) return undefined;
     let curr = this.head;
     let newTail = curr;
-
+    //loop till next is null and assign tail to newtail
     while (curr.next) {
       newTail = curr;
       curr = curr.next;
@@ -34,5 +34,26 @@ export class SinglyLinkedList {
       this.tail = null;
     }
     return curr;
+  }
+
+  shift() {
+    if (!this.head) return undefined;
+    let currHead = this.head;
+    this.head = currHead.next;
+    this.length--;
+    return currHead;
+  }
+
+  unshift(val) {
+    const newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    }
+    let currentHead = this.head;
+
+    newNode.next = currentHead;
+    this.head = newNode;
+    this.length++;
   }
 }
