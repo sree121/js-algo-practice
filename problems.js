@@ -175,7 +175,28 @@ exports.problems = function() {
     }
     return false;
   }
-  var result = sumPair([5, 2, 10], 15);
+  // var result = sumPair([5, 2, 10], 15);
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function convert0TO5(num) {
+    if (num == 0) {
+      return 5;
+    } else {
+      convertHelper(num);
+    }
+
+    function convertHelper(num) {
+      if (num == 0) return 0;
+
+      let digit = num % 10;
+      if (digit === 0) {
+        digit = 5;
+      }
+      return convertHelper(parseInt(num / 10)) * 10 + digit;
+    }
+  }
+  var result = convert0TO5(10550);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(result)}`;

@@ -4,5 +4,5 @@ import { functional } from './functional.js';
 import { LinkedList } from './DS/LinkedList';
 functional();
 problems();
-sort();
-LinkedList();
+// sort();
+// LinkedList();
