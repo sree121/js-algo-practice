@@ -4,5 +4,6 @@ exports.LinkedList = function() {
   list.push('10');
   list.push('10---0');
   list.push('220');
+  // list.pop();
   console.log(list);
 };
