@@ -183,7 +183,8 @@ exports.problems = function() {
     if (num == 0) {
       return 5;
     } else {
-      convertHelper(num);
+      res = convertHelper(num);
+      return res;
     }
 
     function convertHelper(num) {
