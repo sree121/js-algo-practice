@@ -93,4 +93,8 @@ export class SinglyLinkedList {
     this.length++;
     return true;
   }
+
+  remove(val, index) {
+    
+  }
 }
