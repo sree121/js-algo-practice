@@ -119,9 +119,15 @@ export class SinglyLinkedList {
     return removed;
   }
   reverse() {
-    var currrentnode = this.head;
+    var currrnode = this.head;
     this.head = this.tail;
-    this.tail = currrentnode;
-    [100, 200, 300];
+    this.tail = currrnode;
+    const next; const prev = null;
+    for(i=0;i<this.length;i++){
+      next = currrnode.next;
+      currrnode.next = prev;
+      prev = node;
+      node = next;  
+    }
   }
 }
