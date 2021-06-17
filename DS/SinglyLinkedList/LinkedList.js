@@ -1,4 +1,6 @@
 import { Node } from './ListNode';
+// alternate for arrays when insertion and deletion from begnning are frequently required
+
 export class SinglyLinkedList {
   constructor() {
     this.head = null;
