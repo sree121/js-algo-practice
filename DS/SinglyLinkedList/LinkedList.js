@@ -94,6 +94,20 @@ export class SinglyLinkedList {
     return true;
   }
 
+  //   currNode = this.head
+
+  // prev
+  // 100	200	300	400		400	200	300	100
+  // 		      next
+  // 	  currnode
+  // 					           200	100	null
+  // 100
+
+  // next = currNode.next;
+  // currNode.next = prev
+  // prev = node
+  // node = next
+
   remove(val, index) {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) return !!this.pop(val);
@@ -103,5 +117,11 @@ export class SinglyLinkedList {
     prev.next = removed.next;
     this.length--;
     return removed;
+  }
+  reverse() {
+    var currrentnode = this.head;
+    this.head = this.tail;
+    this.tail = currrentnode;
+    [100, 200, 300];
   }
 }
