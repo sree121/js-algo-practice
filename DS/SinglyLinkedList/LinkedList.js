@@ -122,12 +122,23 @@ export class SinglyLinkedList {
     var currrnode = this.head;
     this.head = this.tail;
     this.tail = currrnode;
-    const next; const prev = null;
-    for(i=0;i<this.length;i++){
+    var next;
+    var prev = null;
+    for (var i = 0; i < this.length; i++) {
       next = currrnode.next;
       currrnode.next = prev;
-      prev = node;
-      node = next;  
+      prev = currrnode;
+      currrnode = next;
     }
+    return this;
+  }
+  print() {
+    var arr = [];
+    var current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    return arr;
   }
 }

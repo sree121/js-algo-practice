@@ -5,8 +5,9 @@ exports.LinkedList = function() {
   list.push('222');
   list.push('333');
   // list.pop();
-  console.log(list);
-  const res = list;
+  list.reverse();
+  const res = list.print();
+  console.log(res);
   const appDiv = document.getElementById('app');
   appDiv.innerHTML = `${JSON.stringify(res)}`;
 };
