@@ -850,3 +850,11 @@ _Solution:_
 - [For Position relative](https://codepen.io/SyedAfrozPasha/pen/EdJNyz)
 
 - [For Position absolute](https://codepen.io/SyedAfrozPasha/pen/bmJBMM)
+
+obj1 = {test:""}
+var obj2 = obj1;
+obj1 = {test1:""};
+var obj3 = obj1;
+
+//obj2 still holds old {test:""} object because reference of object is changed but it retained object in heap memory
+console.log(obj2);
