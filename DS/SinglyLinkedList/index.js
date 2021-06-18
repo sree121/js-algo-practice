@@ -8,6 +8,6 @@ exports.LinkedList = function() {
   list.reverse();
   const res = list.print();
   console.log(res);
-  const appDiv = document.getElementById('app');
+  const appDiv = document.getElementById('app-algo');
   appDiv.innerHTML = `${JSON.stringify(res)}`;
 };
