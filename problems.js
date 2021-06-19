@@ -197,6 +197,20 @@ exports.problems = function() {
       return convertHelper(parseInt(num / 10)) * 10 + digit;
     }
   }
+
+  //returns 7 day names with today first
+  function startday() {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let today = new Date();
+    let start = today.getDay(); //gets day number
+    if (start == 0) {
+      //if Sunday, days are in order
+      return days;
+    } else {
+      //if not Sunday, start days with today
+      return days.slice(start).concat(days.slice(0, start));
+    }
+  }
   var result = convert0TO5(10550);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
