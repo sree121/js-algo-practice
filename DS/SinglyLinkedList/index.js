@@ -1,5 +1,5 @@
 import { SinglyLinkedList } from './LinkedList.js';
-exports.LinkedList = function() {
+exports.SinglyLinkedList = function() {
   const list = new SinglyLinkedList();
   list.push('111');
   list.push('222');
