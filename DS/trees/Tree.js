@@ -1,12 +1,4 @@
-class Node {
-  constructor(val) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BinarySearchTree {
+export class BinarySearchTree {
   constructor() {
     this.root = null;
   }
@@ -34,5 +26,12 @@ class BinarySearchTree {
         current = current.right;
       }
     }
+  }
+}
+class Node {
+  constructor(val) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
   }
 }
