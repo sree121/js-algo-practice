@@ -27,6 +27,12 @@ export class BinarySearchTree {
       }
     }
   }
+
+  find(val) {
+    if (this.root === null) return false;
+    if (this.root.val === val) return this.root;
+    const current = this.root;
+  }
 }
 class Node {
   constructor(val) {
