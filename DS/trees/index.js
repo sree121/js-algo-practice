@@ -1,8 +1,10 @@
 import { BinarySearchTree } from './Tree.js';
 exports.BinarySearchTree = function() {
-  const binarySearchTree = new BinarySearchTree();
-  console.log(binarySearchTree);
-  const res = binarySearchTree;
+  const bst = new BinarySearchTree();
+  bst.insert(20);
+  bst.insert(201);
+  bst.insert(1);
+  const res = bst;
   const appDiv = document.getElementById('app-algo');
   appDiv.innerHTML = `${JSON.stringify(res)}`;
 };

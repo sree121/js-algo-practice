@@ -11,8 +11,8 @@ export class BinarySearchTree {
     }
     var current = this.root;
     while (true) {
-      if (value === current.value) return undefined;
-      if (value < current.value) {
+      if (val === current.val) return undefined;
+      if (val < current.val) {
         if (current.left == null) {
           current.left = newNode;
           return this;
@@ -30,7 +30,7 @@ export class BinarySearchTree {
 }
 class Node {
   constructor(val) {
-    this.value = value;
+    this.val = val;
     this.left = null;
     this.right = null;
   }
