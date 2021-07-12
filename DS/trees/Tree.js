@@ -28,10 +28,35 @@ export class BinarySearchTree {
     }
   }
 
-  find(val) {
+  find(value) {
     if (this.root === null) return false;
-    if (this.root.val === val) return this.root;
-    const current = this.root;
+    if (this.root.val === value) return this.root;
+    let current = this.root;
+    let find = false;
+    while (current && !find) {
+      console.log(current);
+      if (value < current.val) {
+        current = current.left;
+      } else if (value > current.val) {
+        current = current.right;
+      } else {
+        find = true;
+      }
+    }
+    if (!find) return undefined;
+    return current;
+  }
+
+  BFS() {
+    const data = [];
+    const queue = [];
+    const node = this.head;
+    queue.push(node);
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.val);
+      if (node.left) queue.push(node.val);
+    }
   }
 }
 class Node {
