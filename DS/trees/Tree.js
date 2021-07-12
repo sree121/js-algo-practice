@@ -52,12 +52,13 @@ export class BinarySearchTree {
   BFS() {
     const data = [];
     const queue = [];
-    const node = this.head;
+    let node = this.head;
     queue.push(node);
     while (queue.length) {
       node = queue.shift();
       data.push(node.val);
       if (node.left) queue.push(node.val);
+      if (node.right) queue.push(node.val);
     }
   }
 }

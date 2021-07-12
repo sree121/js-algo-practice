@@ -6,7 +6,7 @@ exports.BinarySearchTree = function() {
   bst.insert(3);
   bst.insert(4);
   // bst.find(1);
-  const res = bst.find(3);
+  const res = bst.BFS();
   const appDiv = document.getElementById('app-algo');
   appDiv.innerHTML = `${JSON.stringify(res)}`;
 };
