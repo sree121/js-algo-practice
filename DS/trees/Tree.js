@@ -62,6 +62,9 @@ export class BinarySearchTree {
     }
     return data;
   }
+  //   5
+  //   2   6
+  //  1
   DFSPreO() {
     const data = [];
     let node = this.root;
@@ -80,6 +83,17 @@ export class BinarySearchTree {
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
       data.push(node.val);
+    }
+    traverse(node);
+    return data;
+  }
+  DFSino() {
+    const data = [];
+    let node = this.root;
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.val);
+      if (node.right) traverse(node.right);
     }
     traverse(node);
     return data;
