@@ -65,6 +65,7 @@ export class BinarySearchTree {
   //   5
   //   2   6
   //  1
+  // root --> left --> right
   DFSPreO() {
     const data = [];
     let node = this.root;
@@ -76,6 +77,7 @@ export class BinarySearchTree {
     traverse(node);
     return data;
   }
+  // left --> right --> root
   DFSPostO() {
     const data = [];
     let node = this.root;
@@ -87,6 +89,7 @@ export class BinarySearchTree {
     traverse(node);
     return data;
   }
+  // left --> root --> right
   DFSino() {
     const data = [];
     let node = this.root;
