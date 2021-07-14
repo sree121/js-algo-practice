@@ -62,6 +62,28 @@ export class BinarySearchTree {
     }
     return data;
   }
+  DFSPreO() {
+    const data = [];
+    let node = this.root;
+    function traverse(node) {
+      data.push(node.val);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(node);
+    return data;
+  }
+  DFSPostO() {
+    const data = [];
+    let node = this.root;
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.val);
+    }
+    traverse(node);
+    return data;
+  }
 }
 class Node {
   constructor(val) {
