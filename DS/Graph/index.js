@@ -7,6 +7,7 @@ exports.Graph = function() {
   g.addVertex('CHN');
   g.addVertex('HYD');
   g.addEdge('DEL', 'BEN');
+  g.removeEdge('DEL', 'BEN');
   const res = g;
   const appDiv = document.getElementById('app-algo');
   appDiv.innerHTML = `${JSON.stringify(res)}`;
