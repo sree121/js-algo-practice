@@ -39,4 +39,22 @@ export class Graph {
     })(v);
     return result;
   }
+
+  DFSI(start) {
+    const stack = [start];
+    const visited = {};
+    const result = [];
+    let currentV;
+    while (stack.length) {
+      currentV = stack.pop();
+      result.push(currentV);
+
+      this.adjList[start].forEach(neighbor => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          stack.push(neighbor);
+        }
+      });
+    }
+  }
 }
