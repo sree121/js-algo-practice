@@ -24,4 +24,19 @@ export class Graph {
     }
     delete this.adjList[v];
   }
+
+  DFSR(v) {
+    const result = [];
+    const visited = {};
+    const adj = this.adjList;
+    (function dfs(vtx) {
+      if (!vtx) return null;
+      visited[vtx] = true;
+      result.push(vtx);
+      adj[vtx].forEach(neighbor => {
+        if (!visited[neighbor]) return dfs(neighbor);
+      });
+    })(v);
+    return result;
+  }
 }
