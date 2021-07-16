@@ -34,7 +34,7 @@ export class Graph {
       visited[vtx] = true;
       result.push(vtx);
       adj[vtx].forEach(neighbor => {
-        if (!visited[neighbor]) dfs(neighbor);
+        if (!visited[neighbor]) return dfs(neighbor);
       });
     })(v);
     return result;
