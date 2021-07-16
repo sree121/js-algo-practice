@@ -45,6 +45,7 @@ export class Graph {
     const visited = {};
     const result = [];
     let currentV;
+    visited[start] = true;
     while (stack.length) {
       currentV = stack.pop();
       result.push(currentV);
@@ -53,6 +54,26 @@ export class Graph {
         if (!visited[neighbor]) {
           visited[neighbor] = true;
           stack.push(neighbor);
+        }
+      });
+    }
+    return result;
+  }
+
+  bfs(start) {
+    const queue = [start];
+    const visited = {};
+    const result = [];
+    let currentV;
+    visited[start] = true;
+    while (queue.length) {
+      currentV = queue.shift();
+      result.push(currentV);
+
+      this.adjList[start].forEach(neighbor => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          queue.push(neighbor);
         }
       });
     }
