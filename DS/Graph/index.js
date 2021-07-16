@@ -8,7 +8,7 @@ exports.Graph = function() {
   g.addVertex('HYD');
   g.addEdge('DEL', 'BEN');
   g.addEdge('DEL', 'CHN');
-  const res = g.DFSR('DEL');
+  const res = g.DFSI('DEL');
   console.log(res);
   const appDiv = document.getElementById('app-algo');
   appDiv.innerHTML = `${JSON.stringify(res)}`;

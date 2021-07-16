@@ -56,5 +56,6 @@ export class Graph {
         }
       });
     }
+    return result;
   }
 }
