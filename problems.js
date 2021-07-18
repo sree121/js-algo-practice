@@ -197,6 +197,7 @@ exports.problems = function() {
       return convertHelper(parseInt(num / 10)) * 10 + digit;
     }
   }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //returns 7 day names with today first
   function startday() {
@@ -211,6 +212,29 @@ exports.problems = function() {
       return days.slice(start).concat(days.slice(0, start));
     }
   }
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const debounce = (func, delay) => {
+    let debounceTimer;
+    return function() {
+      const context = this;
+      const args = arguments;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => func.apply(context, args), delay);
+    };
+  };
+  button.addEventListener(
+    'click',
+    debounce(function() {
+      alert(
+        'Hello\nNo matter how many times you' +
+          'click the debounce button, I get ' +
+          'executed once every 3 seconds!!'
+      );
+    }, 3000)
+  );
+
   var result = convert0TO5(10550);
   // Write Javascript code!
   const appDiv = document.getElementById('app');
